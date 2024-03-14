@@ -18,12 +18,11 @@ String receivedString;
 void setup()
 {
     Serial.begin(9600);
-    servoThumb.attach(7);
-    servoIndex.attach(9);
-    servoMiddle.attach(11);
-    servoRing.attach(8);
-    servoPinky.attach(10);
-    servoWrist.attach(13);
+    servoThumb.attach(2);
+    servoIndex.attach(3);
+    servoMiddle.attach(7);
+    servoRing.attach(5);
+    servoPinky.attach(6);
 }
 void receiveData()
 {
@@ -100,12 +99,3 @@ void loop()
     {
         servoPinky.write(0);
     }
-    if (valsRec[5] == 0)
-    {
-        servoWrist.write(100);
-    }
-    else
-    {
-        servoWrist.write(0);
-    }
-}
